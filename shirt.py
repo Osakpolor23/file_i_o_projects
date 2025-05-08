@@ -33,7 +33,7 @@ if len(sys.argv) == 3:
     name_1, extension_1 = validate_file(file1)
     name_2, extension_2 = validate_file(file2)
 
-     # check if the input file exists in the directory
+    # check if the input file exists in the directory
     if not os.path.exists(file1):
         sys.exit(f"Input file {file1} doesn't exist")
     
@@ -53,13 +53,14 @@ input_image = ImageOps.fit(input_image, size)
 # call the .paste() method to modify the image in place
 input_image.paste(shirt, (0,0), mask = shirt)  # assign shirt to mask to keep transparency of over-laying shirt
 
+# NB: (0,0) are the cordinates of the placement/overlaying -- top-left corner in this case
 # save the modifications as output file
 input_image.save(file2)
 
 # Also used in the command prompts during scripting are:
 # wget https://cs50.harvard.edu/python/2022/psets/6/shirt/shirt.png
-# -- to download over-laying shirt
+# -- to download over-laying shirt.
 # wget https://cs50.harvard.edu/python/2022/psets/6/shirt/muppets.zip 
-# -- to download zipped file containing muppets to be used as inputs
-# sudo apt install zip -- to install zip command to my wsl environment
-# unzip muppets.zip -- to unzip the zipped file to get the muppets input images to modify
+# -- to download zipped file containing muppets to be used as inputs.
+# sudo apt install zip -- to install zip command to my wsl environment.
+# unzip muppets.zip -- to unzip the zipped file to get the muppets input images to modify.
