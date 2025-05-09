@@ -22,9 +22,9 @@ def validate_file(filename):
 
     return name, extension
 
-# ensure the command line args must be 3(file name inclusive)
+# ensure the command line args must be 2(file name inclusive)
 if len(sys.argv) == 2:
-    # assign the inputs to variables
+    # assign the input to a variable
     file = sys.argv[1]  # The input file to modify
 
     # validate file
