@@ -17,8 +17,8 @@ if len(sys.argv) == 3:
     file1 = sys.argv[1]  # file to write into i.e modify
     file2 = sys.argv[2]  # file to output i.e save as
 
-# check if the input file exists in the directory
-if not os.path.exists(file1):
+    # check if the input file exists in the directory
+    if not os.path.exists(file1):
         sys.exit(f"Could not read {file1} ")
 
 # create an empty list of students to store data in memory
