@@ -39,11 +39,8 @@ try:
     with open(f"{file}") as input_file:
         # loop through each line in the file
         for line in input_file:
-            # avoid counting blank lines
-            if line.strip() == "":
-                continue
-            # avoid counting comments -- lines starting with #
-            if not line.lstrip().startswith("#"):
+            # avoid counting blank lines(empty lines with whitespaces) and comments -- lines starting with #
+            if line.strip() != "" and not line.lstrip().startswith("#"):
                 # increment the counter if the two conditions are met
                 counter += 1            
 # handle non file existence error
